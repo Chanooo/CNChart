@@ -1,0 +1,27 @@
+PODS:
+  - CNChart (0.1.0)
+  - Nimble (8.0.9)
+  - Quick (2.2.1)
+
+DEPENDENCIES:
+  - CNChart (from `../`)
+  - Nimble (~> 8.0.7)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  CNChart:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CNChart: dd4edea015d2bbe677ce96bdb4595d2f6f611a15
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+
+PODFILE CHECKSUM: 8dc1d13f49ccdcd0f0ff18361f5ac8f0020d89f3
+
+COCOAPODS: 1.10.0

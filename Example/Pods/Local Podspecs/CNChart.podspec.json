@@ -1,0 +1,22 @@
+{
+  "name": "CNChart",
+  "version": "0.1.0",
+  "summary": "A short description of CNChart.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Chanooo/CNChart",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Chanooo": "kcw9028@naver.com"
+  },
+  "source": {
+    "git": "https://github.com/Chanooo/CNChart.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "CNChart/Classes/**/*"
+}

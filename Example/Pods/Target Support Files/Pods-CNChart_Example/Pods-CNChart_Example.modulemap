@@ -1,0 +1,6 @@
+framework module Pods_CNChart_Example {
+  umbrella header "Pods-CNChart_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
