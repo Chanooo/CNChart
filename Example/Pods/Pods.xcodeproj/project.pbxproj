@@ -76,6 +76,12 @@
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BB83ADCF34C645A8F6F9D48964638D /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9B9714C476F416AD7FD803EA1184D113 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2D452083ACED7A612FBD96551337A /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9BB5E9B6487FE95C710687B484C17161 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F617AC0B1B68FD97BFF9F0ACB1B38A5 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C0DBB5726AC249300F53DD0 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB5626AC249300F53DD0 /* StatCell.xib */; };
+		9C0DBB5E26AC249E00F53DD0 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */; };
+		9C0DBB6526AC2A9F00F53DD0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */; };
+		9C0DBB6C26AC2AA800F53DD0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */; };
+		9C0DBB7326AC2AB200F53DD0 /* LoadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */; };
+		9C0DBB7A26AC2AE500F53DD0 /* LoadMoreButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */; };
 		9C460BA614D4B1D314A252C4C5CE1D87 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162A95C1568E1D4B129D6FE1090EFA0 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9D7B1AFB65DC11E69C3EB1CB41DC1EBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		9E874C00792FA983399C03EC00AE326D /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7CB7F460539B70D21A7B3E3A3E6A0 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
@@ -256,6 +262,12 @@
 		997E3C9A4E54852FAAAFB65176D09663 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		9A0832E24D30E673CA0519AD66B05679 /* Pods-CNChart_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CNChart_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB5021AED5A79789DB0F55EBB7D8BF9 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
+		9C0DBB5626AC249300F53DD0 /* StatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
+		9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreButton.swift; sourceTree = "<group>"; };
+		9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreButton.xib; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFFCF74125876A658B852971A7C6F2E /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
 		A47630CFC1B0CD18333DBABE56C27754 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
@@ -526,6 +538,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		9C0DBB5526AC226A00F53DD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */,
+				9C0DBB5626AC249300F53DD0 /* StatCell.xib */,
+				9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */,
+				9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */,
+				9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */,
+				9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ADA918815EDF4B3FC63367497252700E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +576,7 @@
 		D97AA7261B814E0AB7F9CD8A2EF85579 /* CNChart */ = {
 			isa = PBXGroup;
 			children = (
+				9C0DBB5526AC226A00F53DD0 /* Resources */,
 				ADA918815EDF4B3FC63367497252700E /* Pod */,
 				7F753B6C8D7A680817A71D7D94FC48F6 /* Support Files */,
 				4574793326AAB63100D9532D /* CNChart.swift */,
@@ -867,6 +893,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0DBB5726AC249300F53DD0 /* StatCell.xib in Resources */,
+				9C0DBB7A26AC2AE500F53DD0 /* LoadMoreButton.xib in Resources */,
+				9C0DBB6C26AC2AA800F53DD0 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +949,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0DBB5E26AC249E00F53DD0 /* StatCell.swift in Sources */,
+				9C0DBB6526AC2A9F00F53DD0 /* LoadingView.swift in Sources */,
 				4DE3C90B559F5EE5FB71D4AE054EDDE7 /* CNChart-dummy.m in Sources */,
+				9C0DBB7326AC2AB200F53DD0 /* LoadMoreButton.swift in Sources */,
 				4574793426AAB63100D9532D /* CNChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

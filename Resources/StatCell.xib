@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IR1-aE-acT" customClass="StatCell" customModule="CNChart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rbw-aa-enb">
+                    <rect key="frame" x="25" y="0.0" width="389" height="8"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="etH-hr-rfH"/>
+                    </constraints>
+                    <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="eEb-0B-B7X" userLabel="label">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="8"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="AWY-UO-gNC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="QAt-6K-BZK"/>
+            <constraints>
+                <constraint firstItem="eEb-0B-B7X" firstAttribute="top" secondItem="IR1-aE-acT" secondAttribute="top" id="0EO-zy-V2p"/>
+                <constraint firstAttribute="bottom" secondItem="Rbw-aa-enb" secondAttribute="bottom" id="1fM-JN-hFy"/>
+                <constraint firstItem="Rbw-aa-enb" firstAttribute="top" secondItem="IR1-aE-acT" secondAttribute="top" id="47C-Wq-FNs"/>
+                <constraint firstAttribute="bottom" secondItem="eEb-0B-B7X" secondAttribute="bottom" id="rLX-08-UGQ"/>
+                <constraint firstAttribute="trailing" secondItem="Rbw-aa-enb" secondAttribute="trailing" id="ra3-hz-3g1"/>
+                <constraint firstItem="Rbw-aa-enb" firstAttribute="leading" secondItem="eEb-0B-B7X" secondAttribute="trailing" constant="5" id="ruJ-uI-8K8"/>
+                <constraint firstItem="eEb-0B-B7X" firstAttribute="leading" secondItem="IR1-aE-acT" secondAttribute="leading" id="vOW-34-NIS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label" destination="eEb-0B-B7X" id="j7e-2L-qOx"/>
+                <outlet property="progress" destination="Rbw-aa-enb" id="K24-iX-zIm"/>
+            </connections>
+            <point key="canvasLocation" x="122" y="-143"/>
+        </view>
+    </objects>
+</document>
