@@ -35,6 +35,8 @@
 		4203EF96811AE514D64AE069311B1575 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44EBE2F631E83E50230D1D5C2B60B9 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		42F76698690916E0407F51610D829412 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E015A67D2713F4D5B3495D7F5998F /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		44C9470137EF941955A1FDCE71D68C26 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCB6B80D524D57AF614AED6AB6D6 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		4543767726AE848900347926 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4543767626AE848900347926 /* ChartData.swift */; };
+		4543768B26AE943100347926 /* CNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4543768A26AE943100347926 /* CNChartDelegate.swift */; };
 		4574793426AAB63100D9532D /* CNChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4574793326AAB63100D9532D /* CNChart.swift */; };
 		46B90B2CF2EB97B38C43A31E9A5478C2 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68449DF12C60B758810B54D0D9E765A /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		46BDEBF35D99D2CC53EF72DFC5BDCDCC /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4FFB8824BD342281F72C24E037285 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -205,6 +207,8 @@
 		40E99F32A6E1B477313ABF52268A5DD9 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		448083A2F92E1ACA9FB1B567B8A0C594 /* Nimble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.release.xcconfig; sourceTree = "<group>"; };
 		450BD2B8E9AEC4D4BF880094E112726B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4543767626AE848900347926 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		4543768A26AE943100347926 /* CNChartDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNChartDelegate.swift; sourceTree = "<group>"; };
 		4574793326AAB63100D9532D /* CNChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNChart.swift; sourceTree = "<group>"; };
 		46148431FD0ED2A2565F0AEA34C343D0 /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
 		48D4563186246495456261E8290A3A36 /* Pods-CNChart_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CNChart_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -426,6 +430,22 @@
 			path = "Target Support Files/Pods-CNChart_Example";
 			sourceTree = "<group>";
 		};
+		4543767526AE846100347926 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4543767626AE848900347926 /* ChartData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4543768926AE941300347926 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4543768A26AE943100347926 /* CNChartDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		5177CFBF79F4A26D2681109FBA112D0D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +596,8 @@
 		D97AA7261B814E0AB7F9CD8A2EF85579 /* CNChart */ = {
 			isa = PBXGroup;
 			children = (
+				4543768926AE941300347926 /* Protocols */,
+				4543767526AE846100347926 /* Models */,
 				9C0DBB5526AC226A00F53DD0 /* Resources */,
 				ADA918815EDF4B3FC63367497252700E /* Pod */,
 				7F753B6C8D7A680817A71D7D94FC48F6 /* Support Files */,
@@ -950,9 +972,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0DBB5E26AC249E00F53DD0 /* StatCell.swift in Sources */,
+				4543768B26AE943100347926 /* CNChartDelegate.swift in Sources */,
 				9C0DBB6526AC2A9F00F53DD0 /* LoadingView.swift in Sources */,
 				4DE3C90B559F5EE5FB71D4AE054EDDE7 /* CNChart-dummy.m in Sources */,
 				9C0DBB7326AC2AB200F53DD0 /* LoadMoreButton.swift in Sources */,
+				4543767726AE848900347926 /* ChartData.swift in Sources */,
 				4574793426AAB63100D9532D /* CNChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,4 @@ class MainViewController: UIViewController {
             $0.layer.cornerRadius = 16
         }
     }
-
 }
-

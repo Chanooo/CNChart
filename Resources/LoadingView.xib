@@ -11,9 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="THn-mq-RHO" userLabel="Loading" customClass="LoadingView" customModule="CNChart" customModuleProvider="target">
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THn-mq-RHO" userLabel="Loading" customClass="LoadingView" customModule="CNChart">
             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nh7-4v-HXi">
                     <rect key="frame" x="157.5" y="15" width="99" height="20"/>
@@ -33,6 +32,7 @@
             <viewLayoutGuide key="safeArea" id="F29-c3-3Mg"/>
             <constraints>
                 <constraint firstItem="nh7-4v-HXi" firstAttribute="centerX" secondItem="THn-mq-RHO" secondAttribute="centerX" id="YFg-Nc-TtT"/>
+                <constraint firstAttribute="height" constant="50" id="onj-qv-c1P"/>
                 <constraint firstItem="nh7-4v-HXi" firstAttribute="top" secondItem="THn-mq-RHO" secondAttribute="top" constant="15" id="uXC-x9-428"/>
                 <constraint firstItem="F29-c3-3Mg" firstAttribute="bottom" secondItem="nh7-4v-HXi" secondAttribute="bottom" constant="15" id="uer-lk-Cpf"/>
                 <constraint firstItem="nh7-4v-HXi" firstAttribute="centerY" secondItem="THn-mq-RHO" secondAttribute="centerY" id="xGc-PD-CCn"/>

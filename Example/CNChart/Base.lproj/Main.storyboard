@@ -108,13 +108,65 @@ made by CNOO</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rbj-NS-Rgt" customClass="CNChart" customModule="CNChart">
-                                <rect key="frame" x="134" y="280" width="110" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAD-wJ-fHi">
+                                <rect key="frame" x="0.0" y="474" width="390" height="336"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-9c-gyZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68x-1h-BOd" customClass="CNChart" customModule="CNChart">
+                                                <rect key="frame" x="16" y="16" width="200" height="304"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="qQe-ul-znK"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="68x-1h-BOd" firstAttribute="top" secondItem="Clv-9c-gyZ" secondAttribute="top" constant="16" id="FOa-cW-n24"/>
+                                            <constraint firstItem="68x-1h-BOd" firstAttribute="leading" secondItem="Clv-9c-gyZ" secondAttribute="leading" constant="16" id="PTy-d6-iaM"/>
+                                            <constraint firstAttribute="bottom" secondItem="68x-1h-BOd" secondAttribute="bottom" constant="16" id="RML-I7-nkq"/>
+                                            <constraint firstAttribute="trailing" secondItem="68x-1h-BOd" secondAttribute="trailing" constant="16" id="iSg-bY-v1r"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Clv-9c-gyZ" firstAttribute="trailing" secondItem="sAD-wJ-fHi" secondAttribute="trailing" id="17c-bx-iW6"/>
+                                    <constraint firstItem="Clv-9c-gyZ" firstAttribute="height" secondItem="sAD-wJ-fHi" secondAttribute="height" id="CzH-Cl-eo5"/>
+                                    <constraint firstItem="Clv-9c-gyZ" firstAttribute="leading" secondItem="sAD-wJ-fHi" secondAttribute="leading" id="Nze-Gh-S0U"/>
+                                    <constraint firstAttribute="top" secondItem="Clv-9c-gyZ" secondAttribute="top" id="YHp-vS-6ZN"/>
+                                    <constraint firstItem="Clv-9c-gyZ" firstAttribute="bottom" secondItem="sAD-wJ-fHi" secondAttribute="bottom" id="bUv-eB-bHq"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Chart Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GX-ax-p3R">
+                                <rect key="frame" x="0.0" y="118" width="390" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pji-ym-f4r">
+                                <rect key="frame" x="16" y="158" width="358" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="UFR-fi-mk9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pji-ym-f4r" firstAttribute="top" secondItem="4GX-ax-p3R" secondAttribute="bottom" constant="16" id="1HW-UK-4Em"/>
+                            <constraint firstItem="4GX-ax-p3R" firstAttribute="top" secondItem="AO6-KI-qeR" secondAttribute="bottom" constant="30" id="1PJ-5N-pAs"/>
+                            <constraint firstItem="sAD-wJ-fHi" firstAttribute="top" secondItem="Pji-ym-f4r" secondAttribute="bottom" constant="16" id="8Uc-7U-JZH"/>
+                            <constraint firstItem="4GX-ax-p3R" firstAttribute="left" secondItem="ygM-Eq-so6" secondAttribute="left" id="BZf-ro-6B6"/>
+                            <constraint firstItem="sAD-wJ-fHi" firstAttribute="leading" secondItem="ygM-Eq-so6" secondAttribute="leading" id="FH5-wP-Ccc"/>
+                            <constraint firstItem="Pji-ym-f4r" firstAttribute="leading" secondItem="ygM-Eq-so6" secondAttribute="leading" constant="16" id="LMW-1L-w7z"/>
+                            <constraint firstAttribute="trailing" secondItem="Pji-ym-f4r" secondAttribute="trailing" constant="16" id="Rxz-AL-Pp1"/>
+                            <constraint firstAttribute="right" secondItem="sAD-wJ-fHi" secondAttribute="right" id="lMx-GF-M5x"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sAD-wJ-fHi" secondAttribute="bottom" id="x7F-7D-C8c"/>
+                            <constraint firstAttribute="right" secondItem="4GX-ax-p3R" secondAttribute="right" id="z8r-Sl-RlX"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="HORIZONTAL" id="mbz-Z5-pcY">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="3nI-jg-iup"/>
                     </navigationItem>
@@ -139,7 +191,7 @@ made by CNOO</string>
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1M-AV-tJ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="286"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="502"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical Chart Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-EX-iuZ">
                                                 <rect key="frame" x="87.666666666666671" y="30" width="214.66666666666663" height="24"/>
@@ -147,27 +199,31 @@ made by CNOO</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d5u-hx-jkP" customClass="CNChart" customModule="CNChart">
-                                                <rect key="frame" x="16" y="70" width="358" height="200"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3E-Ap-xpB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="200"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="5OH-Xc-s39"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRi-y8-gfm">
+                                                <rect key="frame" x="16" y="70" width="358" height="300"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="flc-Bg-aSj"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8lF-MY-psN" customClass="CNChart" customModule="CNChart">
+                                                <rect key="frame" x="16" y="386" width="358" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="xWV-OV-VSp"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="sRi-y8-gfm" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="1R4-UP-r37"/>
+                                            <constraint firstAttribute="bottom" secondItem="8lF-MY-psN" secondAttribute="bottom" constant="16" id="5Bh-Qw-Laq"/>
+                                            <constraint firstItem="8lF-MY-psN" firstAttribute="top" secondItem="sRi-y8-gfm" secondAttribute="bottom" constant="16" id="Dci-9b-7IK"/>
                                             <constraint firstItem="YZ1-EX-iuZ" firstAttribute="top" secondItem="U1M-AV-tJ9" secondAttribute="top" constant="30" id="FRQ-qL-Xje"/>
-                                            <constraint firstAttribute="trailing" secondItem="d5u-hx-jkP" secondAttribute="trailing" constant="16" id="JXA-j9-WoE"/>
                                             <constraint firstItem="YZ1-EX-iuZ" firstAttribute="centerX" secondItem="U1M-AV-tJ9" secondAttribute="centerX" id="Rwi-E1-Vhm"/>
-                                            <constraint firstItem="d5u-hx-jkP" firstAttribute="top" secondItem="YZ1-EX-iuZ" secondAttribute="bottom" constant="16" id="W9G-kO-ua6"/>
-                                            <constraint firstAttribute="bottom" secondItem="d5u-hx-jkP" secondAttribute="bottom" constant="16" id="nYq-GK-ysJ"/>
-                                            <constraint firstItem="d5u-hx-jkP" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="qRc-bC-gmy"/>
+                                            <constraint firstItem="8lF-MY-psN" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="RxZ-a7-Sg4"/>
+                                            <constraint firstAttribute="trailing" secondItem="sRi-y8-gfm" secondAttribute="trailing" constant="16" id="bBN-iR-KNh"/>
+                                            <constraint firstAttribute="trailing" secondItem="8lF-MY-psN" secondAttribute="trailing" constant="16" id="muD-7Z-xkS"/>
+                                            <constraint firstItem="sRi-y8-gfm" firstAttribute="top" secondItem="YZ1-EX-iuZ" secondAttribute="bottom" constant="16" id="vyc-jW-Ab7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
