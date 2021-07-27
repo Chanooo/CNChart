@@ -7,6 +7,6 @@
 
 import Foundation
 
-open protocol CNChartDelegate {
+public protocol CNChartDelegate {
     func onLoadMore()
 }

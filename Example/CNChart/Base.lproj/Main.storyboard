@@ -112,13 +112,10 @@ made by CNOO</string>
                                 <rect key="frame" x="0.0" y="474" width="390" height="336"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clv-9c-gyZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="216" height="336"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68x-1h-BOd" customClass="CNChart" customModule="CNChart">
-                                                <rect key="frame" x="16" y="16" width="200" height="304"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="qQe-ul-znK"/>
-                                                </constraints>
+                                                <rect key="frame" x="16" y="16" width="184" height="304"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,7 +175,7 @@ made by CNOO</string>
         <!--VERTICAL-->
         <scene sceneID="Va7-f7-nWd">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZMH-eh-6DC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZMH-eh-6DC" customClass="VerticalViewController" customModule="CNChart_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bHo-5y-HH5"/>
                         <viewControllerLayoutGuide type="bottom" id="XH1-ni-o2F"/>
@@ -191,7 +188,7 @@ made by CNOO</string>
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1M-AV-tJ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="502"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical Chart Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-EX-iuZ">
                                                 <rect key="frame" x="87.666666666666671" y="30" width="214.66666666666663" height="24"/>
@@ -206,23 +203,20 @@ made by CNOO</string>
                                                     <constraint firstAttribute="height" constant="300" id="flc-Bg-aSj"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8lF-MY-psN" customClass="CNChart" customModule="CNChart">
-                                                <rect key="frame" x="16" y="386" width="358" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="xWV-OV-VSp"/>
-                                                </constraints>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8KQ-bi-Qrl" customClass="CNChart" customModule="CNChart">
+                                                <rect key="frame" x="16" y="386" width="358" height="239"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="sRi-y8-gfm" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="1R4-UP-r37"/>
-                                            <constraint firstAttribute="bottom" secondItem="8lF-MY-psN" secondAttribute="bottom" constant="16" id="5Bh-Qw-Laq"/>
-                                            <constraint firstItem="8lF-MY-psN" firstAttribute="top" secondItem="sRi-y8-gfm" secondAttribute="bottom" constant="16" id="Dci-9b-7IK"/>
+                                            <constraint firstItem="8KQ-bi-Qrl" firstAttribute="top" secondItem="sRi-y8-gfm" secondAttribute="bottom" constant="16" id="4Dg-Bb-YBq"/>
                                             <constraint firstItem="YZ1-EX-iuZ" firstAttribute="top" secondItem="U1M-AV-tJ9" secondAttribute="top" constant="30" id="FRQ-qL-Xje"/>
                                             <constraint firstItem="YZ1-EX-iuZ" firstAttribute="centerX" secondItem="U1M-AV-tJ9" secondAttribute="centerX" id="Rwi-E1-Vhm"/>
-                                            <constraint firstItem="8lF-MY-psN" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="RxZ-a7-Sg4"/>
+                                            <constraint firstAttribute="bottom" secondItem="8KQ-bi-Qrl" secondAttribute="bottom" constant="16" id="Yax-2i-DhT"/>
                                             <constraint firstAttribute="trailing" secondItem="sRi-y8-gfm" secondAttribute="trailing" constant="16" id="bBN-iR-KNh"/>
-                                            <constraint firstAttribute="trailing" secondItem="8lF-MY-psN" secondAttribute="trailing" constant="16" id="muD-7Z-xkS"/>
+                                            <constraint firstItem="8KQ-bi-Qrl" firstAttribute="leading" secondItem="U1M-AV-tJ9" secondAttribute="leading" constant="16" id="ba9-vT-gA0"/>
+                                            <constraint firstAttribute="trailing" secondItem="8KQ-bi-Qrl" secondAttribute="trailing" constant="16" id="gh7-yf-9pt"/>
                                             <constraint firstItem="sRi-y8-gfm" firstAttribute="top" secondItem="YZ1-EX-iuZ" secondAttribute="bottom" constant="16" id="vyc-jW-Ab7"/>
                                         </constraints>
                                     </view>
@@ -248,6 +242,9 @@ made by CNOO</string>
                     <navigationItem key="navigationItem" title="VERTICAL" id="t7b-Si-JRh">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="9Tm-1a-b7N"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="chartView" destination="8KQ-bi-Qrl" id="zWn-Zk-iel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUu-ZK-UQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

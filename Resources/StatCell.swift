@@ -11,5 +11,5 @@ class StatCell: UIView {
     
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var label: UILabel!
-    
+ 
 }
