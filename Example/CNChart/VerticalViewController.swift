@@ -16,27 +16,32 @@ class VerticalViewController:
     
     @IBOutlet weak var chartView: CNChart!
     
-    private var data: [ChartData] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         chartView.delegate = self
-        chartView.reloadChart(data: data, isEnd: false)
+        chartView.addData(data: [], isEnd: false)
+    }
+    
+    @IBAction func onRefresh(_ sender: Any) {
+        chartView.setClear()
+        onLoadMore()
     }
     
     
     // MARK: - CNChartDelegate
     private var count = 1
     func onLoadMore() {
+        var data: [ChartData] = []
         DispatchQueue.main.asyncAfter(deadline: .now()+1, execute: {
             self.count += 1
             for i in 0...10 {
                 let chart = ChartData(id: "\(i)_\(self.count)",
-                                      value: CGFloat(i),
+                                      value: Float(i*11*self.count + data.count*10),
                                       label: "12/23")
-                self.data.append(chart)
+                data.append(chart)
             }
-            self.chartView.reloadChart(data: self.data, isEnd: self.data.count > 50)
+            self.chartView.addData(data: data, isEnd: data.count > 50)
         })
     }
 }

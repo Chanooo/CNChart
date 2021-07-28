@@ -240,7 +240,11 @@ made by CNOO</string>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="VERTICAL" id="t7b-Si-JRh">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="9Tm-1a-b7N"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="9Tm-1a-b7N">
+                            <connections>
+                                <action selector="onRefresh:" destination="ZMH-eh-6DC" id="bmt-ls-tmY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chartView" destination="8KQ-bi-Qrl" id="zWn-Zk-iel"/>

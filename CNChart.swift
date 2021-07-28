@@ -132,21 +132,34 @@ open class CNChart: UIStackView {
     
     /// if isEnd,
     private var mData: [ChartData] = []
-    open func reloadChart(data: [ChartData], isEnd: Bool) {
+    open func addData(data: [ChartData], isEnd: Bool) {
+        
+        // getMaxValue
+        let maxValue = max(
+            getMaxValue(data: mData),
+            getMaxValue(data: data)
+        )
         
         var newIdx = 0
         data.forEach { chart in
-            if !mData.contains(where: {$0.id == chart.id}) {
+            if mData.contains(where: {$0.id == chart.id}) {
                 // 이미 포함된 것 - setMax
-                
+//                arrangedSubviews.
             } else {
                 // 새로 들어온 것
                 mData.append(chart)
+                
                 let cell = self.getStatCell()
+                cell.id = chart.id
+//                cell.heightConstraint.constant = 15
+                cell.value = chart.value
+                UIView.animate(withDuration: 2.0, animations: {
+                    cell.progress.setProgress(chart.value/maxValue, animated: true)
+                })
                 cell.alpha = 0
                 self.addArrangedSubview(cell)
-                cell.transform = CGAffineTransform(translationX: 0, y: 10)
-                let duration = 0.5
+                cell.transform = CGAffineTransform(translationX: 0, y: 5)
+                let duration = 0.05
                 UIView.animate(withDuration: duration,
                                delay: Double(newIdx)*duration)
                 {
@@ -157,14 +170,39 @@ open class CNChart: UIStackView {
             }
         }
         
+//        updateProgress()
+        
         setButton(on: !isEnd)
         setLoading(on: false)
     }
+    
+    open func setClear() {
+        mData.removeAll()
+        arrangedSubviews.forEach {
+            $0.removeFromSuperview()
+        }
+        setButton(on: false)
+        setLoading(on: true)
+    }
+    
     // MARK: - LOGIC
-    private func calculateMax() {
-        var maxValue = 0
-        if let mData.sorted(by: {$0.value < $1.value}).first?.value
-        
+    private func getMaxValue(data: [ChartData]) -> Float {
+        if let maxValue = data.sorted(by: {$0.value > $1.value}).first?.value {
+            print(maxValue)
+            return maxValue
+        } else {
+            return 0
+        }
+    }
+    
+    private func updateProgress() {
+        let maxValue = getMaxValue(data: mData)
+        self.arrangedSubviews.forEach {
+            if let cell = $0 as? StatCell {
+                cell.maxValue = maxValue
+                cell.updateProgress()
+            }
+        }
     }
     
     // MARK: - UI

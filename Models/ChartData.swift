@@ -7,12 +7,12 @@
 
 public struct ChartData {
     let id: String
-    let value: CGFloat
+    let value: Float
     let label: String
     let color: UIColor?
     
     public init(id: String,
-                value: CGFloat,
+                value: Float,
                 label: String,
                 color: UIColor? = nil) {
         self.id = id
