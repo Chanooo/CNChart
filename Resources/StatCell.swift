@@ -12,14 +12,16 @@ class StatCell: UIView {
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var labelWidthConstraint: NSLayoutConstraint!
     
-    var id: String = ""
     var value: Float = 1.0
     var maxValue: Float = 1.0
     
-    func updateProgress() {
-        UIView.animate(withDuration: 2.0) {
-            self.progress.setProgress(self.value/self.maxValue, animated: true)
-        }
+    func updateProgress(duration: TimeInterval, delay: TimeInterval = 0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+            UIView.animate(withDuration: duration) {
+                self.progress.setProgress(self.value/self.maxValue, animated: true)
+            }
+        })
     }
 }

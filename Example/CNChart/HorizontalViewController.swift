@@ -1,15 +1,15 @@
 //
-//  VerticalViewController.swift
+//  HorizontalViewController.swift
 //  CNChart_Example
 //
-//  Created by CNOO on 2021/07/27.
+//  Created by CNOO on 2021/07/29.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import CNChart
 
-class VerticalViewController:
+class HorizontalViewController:
     UIViewController,
     CNChartDelegate
 {
@@ -80,5 +80,3 @@ class VerticalViewController:
     }
     
 }
-
-

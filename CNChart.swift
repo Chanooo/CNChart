@@ -12,10 +12,26 @@ import UIKit
 open class CNChart: UIStackView {
     private let icon = "📊"
     
-    private var button: UIButton!
-    private var loading: UIView!
+    private var button: LoadMoreButton!
+    private var loading: LoadingView!
+    private var mData: [ChartData] = []
+    
     open var delegate: CNChartDelegate?
     
+    open var font = UIFont.systemFont(ofSize: 9, weight: .medium)
+    open var chartDuration: TimeInterval = 1.5
+    open var showDuration: TimeInterval = 0.05
+    open var cellHeight: CGFloat = 10 {
+        didSet { updateChartUI() }
+    }
+    open var labelAlignment: NSTextAlignment = .center {
+        didSet { updateChartUI() }
+    }
+    open override var spacing: CGFloat {
+        didSet { updateChartUI() }
+    }
+    
+    /// Do not change this value "PROGRAMMICALLY"
     open override var axis : UILayoutConstraintAxis {
         get {
             return super.axis
@@ -73,25 +89,16 @@ open class CNChart: UIStackView {
         
         self.spacing = 6
         
-        
-//        for _ in 0...10 {
-//            let stat = getStatCell()
-//            self.addArrangedSubview(stat)
-//        }
-        
         button = UINib(nibName: "LoadMoreButton", bundle: bundle)
             .instantiate(withOwner: nil, options: nil)
-            .first as! LoadMoreButton
-        
+            .first as? LoadMoreButton
         button.addTarget(self, action: #selector(onLoadMore), for: .touchUpInside)
         
         loading = UINib(nibName: "LoadingView", bundle: bundle)
             .instantiate(withOwner: nil, options: nil)
-            .first as! LoadingView
+            .first as? LoadingView
         
-//        self.addArrangedSubview(button)
         self.addArrangedSubview(loading)
-//        loading.isHidden = true
     }
     
     
@@ -121,8 +128,8 @@ open class CNChart: UIStackView {
     
     
     
+    // MARK: - FUNCTION
     @objc private func onLoadMore() {
-        log(string: "onLoadMore!!")
         delegate?.onLoadMore()
         
         setButton(on: false)
@@ -130,8 +137,7 @@ open class CNChart: UIStackView {
     }
     
     
-    /// if isEnd,
-    private var mData: [ChartData] = []
+    /// data : data will be added. isEnd: if true, loadMore Button will be presented
     open func addData(data: [ChartData], isEnd: Bool) {
         
         // getMaxValue
@@ -140,37 +146,61 @@ open class CNChart: UIStackView {
             getMaxValue(data: data)
         )
         
-        var newIdx = 0
-        data.forEach { chart in
-            if mData.contains(where: {$0.id == chart.id}) {
-                // 이미 포함된 것 - setMax
-//                arrangedSubviews.
-            } else {
-                // 새로 들어온 것
-                mData.append(chart)
-                
-                let cell = self.getStatCell()
-                cell.id = chart.id
-//                cell.heightConstraint.constant = 15
-                cell.value = chart.value
-                UIView.animate(withDuration: 2.0, animations: {
-                    cell.progress.setProgress(chart.value/maxValue, animated: true)
-                })
-                cell.alpha = 0
-                self.addArrangedSubview(cell)
-                cell.transform = CGAffineTransform(translationX: 0, y: 5)
-                let duration = 0.05
-                UIView.animate(withDuration: duration,
-                               delay: Double(newIdx)*duration)
-                {
-                    cell.transform = CGAffineTransform.identity
-                    cell.alpha = 1
-                }
-                newIdx += 1
+        // getMaxLabelWidth
+        let maxLabelWidth = max(
+            getMaxLabelWidth(data: mData),
+            getMaxLabelWidth(data: data)
+        )
+        ß
+        // Update added progress
+        self.arrangedSubviews.forEach {
+            if let cell = $0 as? StatCell {
+                cell.labelWidthConstraint.constant = maxLabelWidth
+                cell.maxValue = maxValue
+                cell.updateProgress(duration: chartDuration)
             }
         }
         
-//        updateProgress()
+        
+        // add new data
+        var newIdx = 0
+        data.forEach { chart in
+            mData.append(chart)
+            
+            let cell = self.getStatCell()
+            
+            // Label Width
+            cell.labelWidthConstraint.constant = maxLabelWidth
+            cell.label.textAlignment = labelAlignment
+            cell.label.text = chart.label
+        
+            // Cell Height
+            cell.heightConstraint.constant = self.cellHeight
+            cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
+        
+            // Stat Color
+            if let color = chart.color {
+                cell.progress.progressTintColor = color
+            }
+        
+            // Animate Progress
+            cell.value = chart.value
+            cell.maxValue = maxValue
+            cell.updateProgress(duration: chartDuration, delay: Double(newIdx)*showDuration)
+        
+            // Animate Appear
+            cell.alpha = 0
+            self.addArrangedSubview(cell)
+            cell.transform = CGAffineTransform(translationX: 0, y: 5)
+            UIView.animate(withDuration: showDuration,
+                           delay: Double(newIdx)*showDuration)
+            {
+                cell.transform = CGAffineTransform.identity
+                cell.alpha = 1
+            }
+            newIdx += 1
+        }
+        
         
         setButton(on: !isEnd)
         setLoading(on: false)
@@ -188,21 +218,25 @@ open class CNChart: UIStackView {
     // MARK: - LOGIC
     private func getMaxValue(data: [ChartData]) -> Float {
         if let maxValue = data.sorted(by: {$0.value > $1.value}).first?.value {
-            print(maxValue)
             return maxValue
         } else {
             return 0
         }
     }
     
-    private func updateProgress() {
-        let maxValue = getMaxValue(data: mData)
-        self.arrangedSubviews.forEach {
-            if let cell = $0 as? StatCell {
-                cell.maxValue = maxValue
-                cell.updateProgress()
-            }
+    private func getMaxLabelWidth(data: [ChartData]) -> CGFloat {
+        if let maxWidthLabel = data.sorted(by: {
+                                            getTextSize(text: $0.label).width >
+                                            getTextSize(text: $1.label).width}
+        ).first?.label {
+            return getTextSize(text: maxWidthLabel).width
+        } else {
+            return 20
         }
+    }
+    
+    private func getTextSize(text: String) -> CGSize {
+        return text.size(withAttributes: [NSAttributedString.Key.font : self.font])
     }
     
     // MARK: - UI
@@ -248,6 +282,47 @@ open class CNChart: UIStackView {
         print("[CNChart\(icon)]: \(string)")
     }
     
+    
+    // MARK: - Open Function
+    /// Setting Loading label text
+    public func setLoadingText(text: String) {
+        loading.loadingLabel.text = text
+    }
+    
+    /// Setting Loading label text color
+    public func setLoadingTextColor(color: UIColor){
+        loading.loadingLabel.textColor = color
+    }
+    
+    /// Setting Loading indicator tint color
+    public func setIndicatorTintColor(color: UIColor) {
+        loading.indicator.tintColor = color
+    }
+    
+    /// Setting LoadMore Button Title text
+    public func setButtonTitle(title: String, state: UIControlState = .normal) {
+        button.setTitle(title, for: state)
+    }
+    
+    /// Setting LoadMore Button Icon
+    public func setButtonIcon(image: UIImage, state: UIControlState = .normal) {
+        button.setImage(image, for: state)
+    }
+    
+    /// when the properties changed, this will be automatically called.
+    public func updateChartUI() {
+        arrangedSubviews.forEach {
+            if let cell = $0 as? StatCell {
+                
+                // Label Width
+                cell.label.textAlignment = labelAlignment
+            
+                // Cell Height
+                cell.heightConstraint.constant = self.cellHeight
+                cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
+            }
+        }
+    }
     
     
 }

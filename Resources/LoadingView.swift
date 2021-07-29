@@ -8,5 +8,6 @@
 import UIKit
 
 class LoadingView: UIView {
-    
+    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
 }
