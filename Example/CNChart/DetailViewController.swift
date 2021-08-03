@@ -1,19 +1,18 @@
 //
-//  HorizontalViewController.swift
+//  VerticalViewController.swift
 //  CNChart_Example
 //
-//  Created by CNOO on 2021/07/29.
+//  Created by CNOO on 2021/07/27.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import CNChart
 
-class HorizontalViewController:
+class DetailViewController:
     UIViewController,
     CNChartDelegate
 {
-    
     @IBOutlet weak var chartView: CNChart!
     @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var cellHeightStepper: UIStepper!
@@ -41,7 +40,7 @@ class HorizontalViewController:
         switch sender.tag {
         case 0:  chartView.cellHeight = CGFloat(sender.value)
         case 1:  chartView.chartDuration = sender.value
-        case 2:  chartView.chartDuration = sender.value
+        case 2:  chartView.showDuration = sender.value
         default: chartView.spacing = CGFloat(sender.value)
         }
         valueLabels[sender.tag].text = String(sender.value)
@@ -80,3 +79,5 @@ class HorizontalViewController:
     }
     
 }
+
+

@@ -99,7 +99,7 @@ made by CNOO</string>
         <!--HORIZONTAL-->
         <scene sceneID="TBL-QF-fQi">
             <objects>
-                <viewController id="wts-r6-Ehe" customClass="HorizontalViewController" customModule="CNChart_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wts-r6-Ehe" customClass="DetailViewController" customModule="CNChart_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AO6-KI-qeR"/>
                         <viewControllerLayoutGuide type="bottom" id="Pbj-zY-CnS"/>
@@ -140,6 +140,9 @@ made by CNOO</string>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal Chart Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GX-ax-p3R">
                                 <rect key="frame" x="0.0" y="118" width="390" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="KZh-Ym-VQy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -317,7 +320,7 @@ made by CNOO</string>
         <!--VERTICAL-->
         <scene sceneID="Va7-f7-nWd">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZMH-eh-6DC" customClass="VerticalViewController" customModule="CNChart_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZMH-eh-6DC" customClass="DetailViewController" customModule="CNChart_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bHo-5y-HH5"/>
                         <viewControllerLayoutGuide type="bottom" id="XH1-ni-o2F"/>

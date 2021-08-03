@@ -151,7 +151,7 @@ open class CNChart: UIStackView {
             getMaxLabelWidth(data: mData),
             getMaxLabelWidth(data: data)
         )
-        ß
+        
         // Update added progress
         self.arrangedSubviews.forEach {
             if let cell = $0 as? StatCell {
@@ -191,6 +191,8 @@ open class CNChart: UIStackView {
             // Animate Appear
             cell.alpha = 0
             self.addArrangedSubview(cell)
+            
+            cell.transform = CGAffineTransform(rotationAngle: 90)
             cell.transform = CGAffineTransform(translationX: 0, y: 5)
             UIView.animate(withDuration: showDuration,
                            delay: Double(newIdx)*showDuration)
