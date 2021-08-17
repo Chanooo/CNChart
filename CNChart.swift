@@ -167,17 +167,27 @@ open class CNChart: UIStackView {
         data.forEach { chart in
             mData.append(chart)
             
-            let cell = self.getStatCell()
+//            let cell = self.getStatCell(axis: self.axis)
+            let cell = StatCell.getStatCell(axis: self.axis)
             
-            // Label Width
-            cell.labelWidthConstraint.constant = maxLabelWidth
-            cell.label.textAlignment = labelAlignment
-            cell.label.text = chart.label
-        
-            // Cell Height
-            cell.heightConstraint.constant = self.cellHeight
-            cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
-        
+            if self.axis == .vertical {
+                // Label Width
+                cell.labelWidthConstraint.constant = maxLabelWidth
+                cell.label.textAlignment = labelAlignment
+                cell.label.text = chart.label
+                
+                // Cell Height
+                cell.heightConstraint.constant = self.cellHeight
+                cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
+                
+            } else {
+                cell.rotateView()
+                
+                
+                
+            }
+            
+            
             // Stat Color
             if let color = chart.color {
                 cell.progress.progressTintColor = color
@@ -192,12 +202,22 @@ open class CNChart: UIStackView {
             cell.alpha = 0
             self.addArrangedSubview(cell)
             
-            cell.transform = CGAffineTransform(rotationAngle: 90)
-            cell.transform = CGAffineTransform(translationX: 0, y: 5)
+            
+            if axis == .vertical {
+                cell.transform = CGAffineTransform(rotationAngle: 90)
+                cell.transform = CGAffineTransform(translationX: 0, y: 5)
+            } else {
+                
+            }
+            
+            
+            
+            
+            
             UIView.animate(withDuration: showDuration,
                            delay: Double(newIdx)*showDuration)
             {
-                cell.transform = CGAffineTransform.identity
+//                cell.transform = CGAffineTransform.identity
                 cell.alpha = 1
             }
             newIdx += 1
@@ -242,13 +262,6 @@ open class CNChart: UIStackView {
     }
     
     // MARK: - UI
-    private func getStatCell() -> StatCell {
-        let bundle = Bundle(for: self.classForCoder)
-        return UINib(nibName: "StatCell", bundle: bundle)
-            .instantiate(withOwner: nil, options: nil)
-            .first as! StatCell
-    }
-    
     private func setButton(on: Bool) {
         if button.superview != nil {
             button.removeFromSuperview()

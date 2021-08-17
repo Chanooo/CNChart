@@ -14,6 +14,11 @@ class StatCell: UIView {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var labelWidthConstraint: NSLayoutConstraint!
     
+    
+    private var axis: UILayoutConstraintAxis!
+    
+    
+    
     var value: Float = 1.0
     var maxValue: Float = 1.0
     
@@ -23,5 +28,38 @@ class StatCell: UIView {
                 self.progress.setProgress(self.value/self.maxValue, animated: true)
             }
         })
+    }
+    
+    func rotateView() {
+        progress.transform = CGAffineTransform(rotationAngle: .pi * -0.5)
+    }
+    
+    
+    override open func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if self.axis == .horizontal {
+            let width = bounds.width
+            let height = bounds.height
+    //
+            progress.bounds.size.width = height
+            progress.bounds.size.height = width
+    //        progress.center.x = bounds.midX
+    //        progress.center.y = bounds.midY
+        }
+    }
+    
+    
+    static func getStatCell(axis: UILayoutConstraintAxis) -> StatCell {
+        let bundle = Bundle(for: self.classForCoder())
+        let nib = UINib(nibName: "StatCell", bundle: bundle)
+            .instantiate(withOwner: nil, options: nil)
+        
+        let cell = axis == .vertical
+            ? nib.first as! StatCell
+            : nib.last as! StatCell
+        
+        cell.axis = axis
+        return cell
     }
 }

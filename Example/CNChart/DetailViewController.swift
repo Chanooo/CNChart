@@ -32,6 +32,7 @@ class DetailViewController:
     
     @IBAction func onRefresh(_ sender: UIBarButtonItem) {
         chartView.setClear()
+        count = 1
         onLoadMore()
     }
     
