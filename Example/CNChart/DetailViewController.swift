@@ -71,7 +71,9 @@ class DetailViewController:
                     Float.random(in: 0..<100)
                 
                 let chart = ChartData(value: value,
-                                      label: "Data_\(i*i*self.count*self.count)",
+                                      label: self.chartView.axis == .vertical
+                                        ? "Data_\(i*i*self.count*self.count)"
+                                        : "\(i*i*self.count*self.count)",
                                       color: self.colors.randomElement() ?? nil)
                 data.append(chart)
             }

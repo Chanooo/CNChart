@@ -49,21 +49,21 @@
             <point key="canvasLocation" x="122" y="-143"/>
         </view>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36g-4k-YPz" userLabel="Stat Cell Vertical" customClass="StatCell" customModule="CNChart" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="341"/>
+            <rect key="frame" x="0.0" y="0.0" width="20" height="341"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
             <subviews>
                 <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="gUj-xH-dBM">
-                    <rect key="frame" x="70" y="0.0" width="10" height="306"/>
+                    <rect key="frame" x="5" y="0.0" width="10" height="306"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="10" id="jQI-DF-ffC"/>
                     </constraints>
                     <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </progressView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data_1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-PK-SaW" userLabel="label">
-                    <rect key="frame" x="0.0" y="326" width="150" height="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-PK-SaW" userLabel="label">
+                    <rect key="frame" x="0.0" y="326" width="20" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="FbM-sQ-oNd"/>
-                        <constraint firstAttribute="width" constant="150" id="WqX-gf-LBS"/>
+                        <constraint firstAttribute="width" constant="20" id="WqX-gf-LBS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                     <nil key="textColor"/>
