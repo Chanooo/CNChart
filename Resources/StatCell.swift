@@ -11,8 +11,17 @@ class StatCell: UIView {
     
     @IBOutlet weak var progress: UIProgressView!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var labelWidthConstraint: NSLayoutConstraint!
+    
+    
+    // Vertical
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
+    // Horizontal
+    var progressWidth: CGFloat = 10 {
+        didSet { progress.bounds.size.height = progressWidth }
+    }
     
     
     private var axis: UILayoutConstraintAxis!
@@ -39,11 +48,11 @@ class StatCell: UIView {
         super.layoutSubviews()
         
         if self.axis == .horizontal {
-            let width = bounds.width
+//            let width = bounds.width
             let height = bounds.height
     //
             progress.bounds.size.width = height
-            progress.bounds.size.height = width
+            progress.bounds.size.height = progressWidth // width
     //        progress.center.x = bounds.midX
     //        progress.center.y = bounds.midY
         }

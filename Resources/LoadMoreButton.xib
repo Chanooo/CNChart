@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRN-K5-kai" customClass="LoadMoreButton" customModule="CNChart" customModuleProvider="target">
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRN-K5-kai" userLabel="Load More - Vertical" customClass="LoadMoreButton" customModule="CNChart" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
             <constraints>
                 <constraint firstAttribute="height" constant="50" id="ad5-ck-8YE"/>
@@ -22,6 +22,16 @@
                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="semibold"/>
             </state>
             <point key="canvasLocation" x="116" y="-84"/>
+        </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-qh-nAZ" userLabel="Load More - Horizontal" customClass="LoadMoreButton" customModule="CNChart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="400"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="70" id="C7B-Bg-Dig"/>
+            </constraints>
+            <state key="normal" image="plus" catalog="system">
+                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="semibold"/>
+            </state>
+            <point key="canvasLocation" x="70" y="220"/>
         </button>
     </objects>
     <resources>

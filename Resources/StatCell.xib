@@ -49,17 +49,21 @@
             <point key="canvasLocation" x="122" y="-143"/>
         </view>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36g-4k-YPz" userLabel="Stat Cell Vertical" customClass="StatCell" customModule="CNChart" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="170" height="341"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="341"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
             <subviews>
                 <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="gUj-xH-dBM">
-                    <rect key="frame" x="0.0" y="0.0" width="170" height="311"/>
+                    <rect key="frame" x="70" y="0.0" width="10" height="306"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="jQI-DF-ffC"/>
+                    </constraints>
                     <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </progressView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data_1" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-PK-SaW" userLabel="label">
-                    <rect key="frame" x="0.0" y="311" width="170" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="data_1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="1P0-PK-SaW" userLabel="label">
+                    <rect key="frame" x="0.0" y="326" width="150" height="15"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="FbM-sQ-oNd"/>
+                        <constraint firstAttribute="height" constant="15" id="FbM-sQ-oNd"/>
+                        <constraint firstAttribute="width" constant="150" id="WqX-gf-LBS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                     <nil key="textColor"/>
@@ -67,21 +71,20 @@
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="gUj-xH-dBM" firstAttribute="centerX" secondItem="36g-4k-YPz" secondAttribute="centerX" id="4lr-Ae-2yM"/>
                 <constraint firstItem="1P0-PK-SaW" firstAttribute="leading" secondItem="36g-4k-YPz" secondAttribute="leading" id="EJ3-9Y-ugD"/>
                 <constraint firstAttribute="bottom" secondItem="1P0-PK-SaW" secondAttribute="bottom" id="N5a-RK-PJQ"/>
                 <constraint firstAttribute="trailing" secondItem="1P0-PK-SaW" secondAttribute="trailing" id="OhO-j3-GxJ"/>
-                <constraint firstItem="gUj-xH-dBM" firstAttribute="leading" secondItem="36g-4k-YPz" secondAttribute="leading" id="TX2-uV-0Ac"/>
-                <constraint firstItem="gUj-xH-dBM" firstAttribute="centerX" secondItem="1P0-PK-SaW" secondAttribute="centerX" id="cYJ-kg-2mp"/>
-                <constraint firstItem="1P0-PK-SaW" firstAttribute="top" secondItem="gUj-xH-dBM" secondAttribute="bottom" id="e0Q-sg-2L1"/>
+                <constraint firstItem="1P0-PK-SaW" firstAttribute="top" secondItem="gUj-xH-dBM" secondAttribute="bottom" constant="20" id="e0Q-sg-2L1"/>
                 <constraint firstItem="gUj-xH-dBM" firstAttribute="top" secondItem="36g-4k-YPz" secondAttribute="top" id="nAH-yd-FfW"/>
-                <constraint firstAttribute="trailing" secondItem="gUj-xH-dBM" secondAttribute="trailing" id="oPA-qD-zuM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="label" destination="1P0-PK-SaW" id="AAM-K8-HC6"/>
+                <outlet property="labelWidthConstraint" destination="WqX-gf-LBS" id="1Le-bW-Rxw"/>
                 <outlet property="progress" destination="gUj-xH-dBM" id="3Y9-AV-frm"/>
             </connections>
-            <point key="canvasLocation" x="-62.318840579710148" y="38.504464285714285"/>
+            <point key="canvasLocation" x="1.4492753623188408" y="38.504464285714285"/>
         </view>
     </objects>
 </document>

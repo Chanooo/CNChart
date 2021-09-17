@@ -21,7 +21,7 @@ open class CNChart: UIStackView {
     open var font = UIFont.systemFont(ofSize: 9, weight: .medium)
     open var chartDuration: TimeInterval = 1.5
     open var showDuration: TimeInterval = 0.05
-    open var cellHeight: CGFloat = 10 {
+    open var cellThickness: CGFloat = 10 {
         didSet { updateChartUI() }
     }
     open var labelAlignment: NSTextAlignment = .center {
@@ -89,14 +89,23 @@ open class CNChart: UIStackView {
         
         self.spacing = 6
         
-        button = UINib(nibName: "LoadMoreButton", bundle: bundle)
-            .instantiate(withOwner: nil, options: nil)
-            .first as? LoadMoreButton
+        
+        // Button
+        let buttonNib = UINib(nibName: "LoadMoreButton", bundle: bundle)
+                        .instantiate(withOwner: nil, options: nil)
+        button = axis == .vertical
+                    ? buttonNib.first as? LoadMoreButton
+                    : buttonNib.last as? LoadMoreButton
+        
         button.addTarget(self, action: #selector(onLoadMore), for: .touchUpInside)
         
-        loading = UINib(nibName: "LoadingView", bundle: bundle)
-            .instantiate(withOwner: nil, options: nil)
-            .first as? LoadingView
+        
+        // Loading View
+        let loadingNib = UINib(nibName: "LoadingView", bundle: bundle)
+                         .instantiate(withOwner: nil, options: nil)
+        loading = axis == .vertical
+                    ? loadingNib.first as? LoadingView
+                    : loadingNib.last as? LoadingView
         
         self.addArrangedSubview(loading)
     }
@@ -155,9 +164,9 @@ open class CNChart: UIStackView {
         // Update added progress
         self.arrangedSubviews.forEach {
             if let cell = $0 as? StatCell {
-                cell.labelWidthConstraint.constant = maxLabelWidth
                 cell.maxValue = maxValue
                 cell.updateProgress(duration: chartDuration)
+                cell.labelWidthConstraint.constant = maxLabelWidth
             }
         }
         
@@ -167,24 +176,24 @@ open class CNChart: UIStackView {
         data.forEach { chart in
             mData.append(chart)
             
-//            let cell = self.getStatCell(axis: self.axis)
             let cell = StatCell.getStatCell(axis: self.axis)
             
+            cell.labelWidthConstraint.constant = maxLabelWidth
+            cell.label.textAlignment = labelAlignment
+            cell.label.text = chart.label
+            
             if self.axis == .vertical {
-                // Label Width
-                cell.labelWidthConstraint.constant = maxLabelWidth
-                cell.label.textAlignment = labelAlignment
-                cell.label.text = chart.label
-                
                 // Cell Height
-                cell.heightConstraint.constant = self.cellHeight
-                cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
+                cell.heightConstraint.constant = self.cellThickness
+                cell.frame.size = CGSize(width: cell.frame.width, height: self.cellThickness)
                 
             } else {
                 cell.rotateView()
                 
-                
-                
+                // Cell Width
+                DispatchQueue.main.async {
+                    cell.progressWidth = self.cellThickness
+                }
             }
             
             
@@ -204,20 +213,14 @@ open class CNChart: UIStackView {
             
             
             if axis == .vertical {
-                cell.transform = CGAffineTransform(rotationAngle: 90)
+//                cell.transform = CGAffineTransform(rotationAngle: 90)
                 cell.transform = CGAffineTransform(translationX: 0, y: 5)
-            } else {
-                
             }
-            
-            
-            
-            
             
             UIView.animate(withDuration: showDuration,
                            delay: Double(newIdx)*showDuration)
             {
-//                cell.transform = CGAffineTransform.identity
+                cell.transform = CGAffineTransform.identity
                 cell.alpha = 1
             }
             newIdx += 1
@@ -333,8 +336,13 @@ open class CNChart: UIStackView {
                 cell.label.textAlignment = labelAlignment
             
                 // Cell Height
-                cell.heightConstraint.constant = self.cellHeight
-                cell.frame.size = CGSize(width: cell.frame.width, height: self.cellHeight)
+                if axis == .vertical {
+                    cell.heightConstraint.constant = self.cellThickness
+                    cell.frame.size = CGSize(width: cell.frame.width, height: self.cellThickness)
+                } else {
+                    cell.progressWidth = self.cellThickness
+//                    cell.frame.size = CGSize(width: self.cellThickness, height: )
+                }
             }
         }
     }

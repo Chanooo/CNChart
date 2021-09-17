@@ -39,12 +39,12 @@ class DetailViewController:
     // MARK: - Control properties
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         switch sender.tag {
-        case 0:  chartView.cellHeight = CGFloat(sender.value)
+        case 0:  chartView.cellThickness = CGFloat(sender.value)
         case 1:  chartView.chartDuration = sender.value
         case 2:  chartView.showDuration = sender.value
         default: chartView.spacing = CGFloat(sender.value)
         }
-        valueLabels[sender.tag].text = String(sender.value)
+        valueLabels[sender.tag].text = String(format: "%.2f", sender.value)
     }
     
     // MARK: - Text Alignment
