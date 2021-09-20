@@ -32,7 +32,7 @@ open class CNChart: UIStackView {
     }
     
     /// Do not change this value "PROGRAMMICALLY"
-    open override var axis : UILayoutConstraintAxis {
+    open override var axis : NSLayoutConstraint.Axis {
         get {
             return super.axis
         }
@@ -126,7 +126,7 @@ open class CNChart: UIStackView {
         #endif
     }
     
-    public convenience init(axis: UILayoutConstraintAxis = .vertical) {
+    public convenience init(axis: NSLayoutConstraint.Axis = .vertical) {
         self.init(frame: CGRect.zero)
         self.axis = axis
         
@@ -318,12 +318,12 @@ open class CNChart: UIStackView {
     }
     
     /// Setting LoadMore Button Title text
-    public func setButtonTitle(title: String, state: UIControlState = .normal) {
+    public func setButtonTitle(title: String, state: UIControl.State = .normal) {
         button.setTitle(title, for: state)
     }
     
     /// Setting LoadMore Button Icon
-    public func setButtonIcon(image: UIImage, state: UIControlState = .normal) {
+    public func setButtonIcon(image: UIImage, state: UIControl.State = .normal) {
         button.setImage(image, for: state)
     }
     

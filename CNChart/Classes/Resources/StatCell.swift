@@ -24,7 +24,7 @@ class StatCell: UIView {
     }
     
     
-    private var axis: UILayoutConstraintAxis!
+    private var axis: NSLayoutConstraint.Axis!
     
     
     
@@ -59,7 +59,7 @@ class StatCell: UIView {
     }
     
     
-    static func getStatCell(axis: UILayoutConstraintAxis) -> StatCell {
+    static func getStatCell(axis: NSLayoutConstraint.Axis) -> StatCell {
         let bundle = Bundle(for: self.classForCoder())
         let nib = UINib(nibName: "StatCell", bundle: bundle)
             .instantiate(withOwner: nil, options: nil)

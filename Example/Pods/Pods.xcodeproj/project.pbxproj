@@ -35,9 +35,6 @@
 		4203EF96811AE514D64AE069311B1575 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44EBE2F631E83E50230D1D5C2B60B9 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		42F76698690916E0407F51610D829412 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E015A67D2713F4D5B3495D7F5998F /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		44C9470137EF941955A1FDCE71D68C26 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DDCB6B80D524D57AF614AED6AB6D6 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		4543767726AE848900347926 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4543767626AE848900347926 /* ChartData.swift */; };
-		4543768B26AE943100347926 /* CNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4543768A26AE943100347926 /* CNChartDelegate.swift */; };
-		4574793426AAB63100D9532D /* CNChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4574793326AAB63100D9532D /* CNChart.swift */; };
 		46B90B2CF2EB97B38C43A31E9A5478C2 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68449DF12C60B758810B54D0D9E765A /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		46BDEBF35D99D2CC53EF72DFC5BDCDCC /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4FFB8824BD342281F72C24E037285 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4A9E7C1A8B697A1C0B0A1E0DF855A591 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11214D026282403D37CAC457C63018 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -78,12 +75,24 @@
 		99E8019F4689A514DAC6AA40AFF7352E /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BB83ADCF34C645A8F6F9D48964638D /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9B9714C476F416AD7FD803EA1184D113 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2D452083ACED7A612FBD96551337A /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9BB5E9B6487FE95C710687B484C17161 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F617AC0B1B68FD97BFF9F0ACB1B38A5 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C0DBB5726AC249300F53DD0 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB5626AC249300F53DD0 /* StatCell.xib */; };
-		9C0DBB5E26AC249E00F53DD0 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */; };
-		9C0DBB6526AC2A9F00F53DD0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */; };
-		9C0DBB6C26AC2AA800F53DD0 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */; };
-		9C0DBB7326AC2AB200F53DD0 /* LoadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */; };
-		9C0DBB7A26AC2AE500F53DD0 /* LoadMoreButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */; };
+		9C37602F26F89D5500F208C9 /* CNChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37602E26F89D5500F208C9 /* CNChart.swift */; };
+		9C37603026F89D5500F208C9 /* CNChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37602E26F89D5500F208C9 /* CNChart.swift */; };
+		9C37604126F89D6C00F208C9 /* CNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603726F89D6C00F208C9 /* CNChartDelegate.swift */; };
+		9C37604226F89D6C00F208C9 /* CNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603726F89D6C00F208C9 /* CNChartDelegate.swift */; };
+		9C37604326F89D6C00F208C9 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603926F89D6C00F208C9 /* ChartData.swift */; };
+		9C37604426F89D6C00F208C9 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603926F89D6C00F208C9 /* ChartData.swift */; };
+		9C37604526F89D6C00F208C9 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603B26F89D6C00F208C9 /* StatCell.swift */; };
+		9C37604626F89D6C00F208C9 /* StatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603B26F89D6C00F208C9 /* StatCell.swift */; };
+		9C37604726F89D6C00F208C9 /* LoadMoreButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603C26F89D6C00F208C9 /* LoadMoreButton.xib */; };
+		9C37604826F89D6C00F208C9 /* LoadMoreButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603C26F89D6C00F208C9 /* LoadMoreButton.xib */; };
+		9C37604926F89D6C00F208C9 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603D26F89D6C00F208C9 /* LoadingView.xib */; };
+		9C37604A26F89D6C00F208C9 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603D26F89D6C00F208C9 /* LoadingView.xib */; };
+		9C37604B26F89D6C00F208C9 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603E26F89D6C00F208C9 /* StatCell.xib */; };
+		9C37604C26F89D6C00F208C9 /* StatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C37603E26F89D6C00F208C9 /* StatCell.xib */; };
+		9C37604D26F89D6C00F208C9 /* LoadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603F26F89D6C00F208C9 /* LoadMoreButton.swift */; };
+		9C37604E26F89D6C00F208C9 /* LoadMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37603F26F89D6C00F208C9 /* LoadMoreButton.swift */; };
+		9C37604F26F89D6C00F208C9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37604026F89D6C00F208C9 /* LoadingView.swift */; };
+		9C37605026F89D6C00F208C9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37604026F89D6C00F208C9 /* LoadingView.swift */; };
 		9C460BA614D4B1D314A252C4C5CE1D87 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6162A95C1568E1D4B129D6FE1090EFA0 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		9D7B1AFB65DC11E69C3EB1CB41DC1EBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		9E874C00792FA983399C03EC00AE326D /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F7CB7F460539B70D21A7B3E3A3E6A0 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
@@ -207,9 +216,6 @@
 		40E99F32A6E1B477313ABF52268A5DD9 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
 		448083A2F92E1ACA9FB1B567B8A0C594 /* Nimble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.release.xcconfig; sourceTree = "<group>"; };
 		450BD2B8E9AEC4D4BF880094E112726B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4543767626AE848900347926 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
-		4543768A26AE943100347926 /* CNChartDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNChartDelegate.swift; sourceTree = "<group>"; };
-		4574793326AAB63100D9532D /* CNChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNChart.swift; sourceTree = "<group>"; };
 		46148431FD0ED2A2565F0AEA34C343D0 /* NMBExpectation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBExpectation.swift; path = Sources/Nimble/Adapters/NMBExpectation.swift; sourceTree = "<group>"; };
 		48D4563186246495456261E8290A3A36 /* Pods-CNChart_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CNChart_Tests-Info.plist"; sourceTree = "<group>"; };
 		490962BE2E7AE1C9C99C88AAFF313A36 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
@@ -266,12 +272,15 @@
 		997E3C9A4E54852FAAAFB65176D09663 /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		9A0832E24D30E673CA0519AD66B05679 /* Pods-CNChart_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CNChart_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9AB5021AED5A79789DB0F55EBB7D8BF9 /* QCKDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QCKDSL.h; path = Sources/QuickObjectiveC/DSL/QCKDSL.h; sourceTree = "<group>"; };
-		9C0DBB5626AC249300F53DD0 /* StatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
-		9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
-		9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreButton.swift; sourceTree = "<group>"; };
-		9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreButton.xib; sourceTree = "<group>"; };
+		9C37602E26F89D5500F208C9 /* CNChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CNChart.swift; path = CNChart/Classes/CNChart.swift; sourceTree = "<group>"; };
+		9C37603726F89D6C00F208C9 /* CNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNChartDelegate.swift; sourceTree = "<group>"; };
+		9C37603926F89D6C00F208C9 /* ChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		9C37603B26F89D6C00F208C9 /* StatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatCell.swift; sourceTree = "<group>"; };
+		9C37603C26F89D6C00F208C9 /* LoadMoreButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadMoreButton.xib; sourceTree = "<group>"; };
+		9C37603D26F89D6C00F208C9 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		9C37603E26F89D6C00F208C9 /* StatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatCell.xib; sourceTree = "<group>"; };
+		9C37603F26F89D6C00F208C9 /* LoadMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreButton.swift; sourceTree = "<group>"; };
+		9C37604026F89D6C00F208C9 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFFCF74125876A658B852971A7C6F2E /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
 		A47630CFC1B0CD18333DBABE56C27754 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
@@ -430,22 +439,6 @@
 			path = "Target Support Files/Pods-CNChart_Example";
 			sourceTree = "<group>";
 		};
-		4543767526AE846100347926 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4543767626AE848900347926 /* ChartData.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4543768926AE941300347926 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				4543768A26AE943100347926 /* CNChartDelegate.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		5177CFBF79F4A26D2681109FBA112D0D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,17 +551,36 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9C0DBB5526AC226A00F53DD0 /* Resources */ = {
+		9C37603626F89D6C00F208C9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9C0DBB5D26AC249E00F53DD0 /* StatCell.swift */,
-				9C0DBB5626AC249300F53DD0 /* StatCell.xib */,
-				9C0DBB6426AC2A9F00F53DD0 /* LoadingView.swift */,
-				9C0DBB6B26AC2AA800F53DD0 /* LoadingView.xib */,
-				9C0DBB7226AC2AB200F53DD0 /* LoadMoreButton.swift */,
-				9C0DBB7926AC2AE500F53DD0 /* LoadMoreButton.xib */,
+				9C37603726F89D6C00F208C9 /* CNChartDelegate.swift */,
 			);
-			path = Resources;
+			name = Protocols;
+			path = CNChart/Classes/Protocols;
+			sourceTree = "<group>";
+		};
+		9C37603826F89D6C00F208C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C37603926F89D6C00F208C9 /* ChartData.swift */,
+			);
+			name = Models;
+			path = CNChart/Classes/Models;
+			sourceTree = "<group>";
+		};
+		9C37603A26F89D6C00F208C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C37603B26F89D6C00F208C9 /* StatCell.swift */,
+				9C37603C26F89D6C00F208C9 /* LoadMoreButton.xib */,
+				9C37603D26F89D6C00F208C9 /* LoadingView.xib */,
+				9C37603E26F89D6C00F208C9 /* StatCell.xib */,
+				9C37603F26F89D6C00F208C9 /* LoadMoreButton.swift */,
+				9C37604026F89D6C00F208C9 /* LoadingView.swift */,
+			);
+			name = Resources;
+			path = CNChart/Classes/Resources;
 			sourceTree = "<group>";
 		};
 		ADA918815EDF4B3FC63367497252700E /* Pod */ = {
@@ -596,12 +608,12 @@
 		D97AA7261B814E0AB7F9CD8A2EF85579 /* CNChart */ = {
 			isa = PBXGroup;
 			children = (
-				4543768926AE941300347926 /* Protocols */,
-				4543767526AE846100347926 /* Models */,
-				9C0DBB5526AC226A00F53DD0 /* Resources */,
+				9C37603826F89D6C00F208C9 /* Models */,
+				9C37603626F89D6C00F208C9 /* Protocols */,
+				9C37603A26F89D6C00F208C9 /* Resources */,
 				ADA918815EDF4B3FC63367497252700E /* Pod */,
 				7F753B6C8D7A680817A71D7D94FC48F6 /* Support Files */,
-				4574793326AAB63100D9532D /* CNChart.swift */,
+				9C37602E26F89D5500F208C9 /* CNChart.swift */,
 			);
 			name = CNChart;
 			path = ../..;
@@ -858,6 +870,9 @@
 					61823A471147C8E954BCDD6B0B88FFC8 = {
 						LastSwiftMigration = 1210;
 					};
+					C9A897EA02CE02CDD3A913C62DD0F8ED = {
+						LastSwiftMigration = 1210;
+					};
 				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
@@ -894,6 +909,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C37604826F89D6C00F208C9 /* LoadMoreButton.xib in Resources */,
+				9C37604C26F89D6C00F208C9 /* StatCell.xib in Resources */,
+				9C37604A26F89D6C00F208C9 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,9 +933,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0DBB5726AC249300F53DD0 /* StatCell.xib in Resources */,
-				9C0DBB7A26AC2AE500F53DD0 /* LoadMoreButton.xib in Resources */,
-				9C0DBB6C26AC2AA800F53DD0 /* LoadingView.xib in Resources */,
+				9C37604B26F89D6C00F208C9 /* StatCell.xib in Resources */,
+				9C37604726F89D6C00F208C9 /* LoadMoreButton.xib in Resources */,
+				9C37604926F89D6C00F208C9 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,13 +989,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0DBB5E26AC249E00F53DD0 /* StatCell.swift in Sources */,
-				4543768B26AE943100347926 /* CNChartDelegate.swift in Sources */,
-				9C0DBB6526AC2A9F00F53DD0 /* LoadingView.swift in Sources */,
+				9C37602F26F89D5500F208C9 /* CNChart.swift in Sources */,
+				9C37604326F89D6C00F208C9 /* ChartData.swift in Sources */,
+				9C37604F26F89D6C00F208C9 /* LoadingView.swift in Sources */,
 				4DE3C90B559F5EE5FB71D4AE054EDDE7 /* CNChart-dummy.m in Sources */,
-				9C0DBB7326AC2AB200F53DD0 /* LoadMoreButton.swift in Sources */,
-				4543767726AE848900347926 /* ChartData.swift in Sources */,
-				4574793426AAB63100D9532D /* CNChart.swift in Sources */,
+				9C37604526F89D6C00F208C9 /* StatCell.swift in Sources */,
+				9C37604126F89D6C00F208C9 /* CNChartDelegate.swift in Sources */,
+				9C37604D26F89D6C00F208C9 /* LoadMoreButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1074,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1535B03867EA7102D8E2F24EAE8E897 /* Pods-CNChart_Example-dummy.m in Sources */,
+				9C37604226F89D6C00F208C9 /* CNChartDelegate.swift in Sources */,
+				9C37604626F89D6C00F208C9 /* StatCell.swift in Sources */,
+				9C37604426F89D6C00F208C9 /* ChartData.swift in Sources */,
+				9C37604E26F89D6C00F208C9 /* LoadMoreButton.swift in Sources */,
+				9C37605026F89D6C00F208C9 /* LoadingView.swift in Sources */,
+				9C37603026F89D5500F208C9 /* CNChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1184,7 @@
 			baseConfigurationReference = 69E3B6893933357845D77A6A9972F7D8 /* Pods-CNChart_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1181,6 +1206,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1299,6 +1325,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULEMAP_FILE = "Target Support Files/CNChart/CNChart.modulemap";
 				PRODUCT_MODULE_NAME = CNChart;
 				PRODUCT_NAME = CNChart;
@@ -1331,6 +1358,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULEMAP_FILE = "Target Support Files/CNChart/CNChart.modulemap";
 				PRODUCT_MODULE_NAME = CNChart;
 				PRODUCT_NAME = CNChart;
@@ -1443,6 +1471,7 @@
 			baseConfigurationReference = 9A0832E24D30E673CA0519AD66B05679 /* Pods-CNChart_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1464,6 +1493,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
