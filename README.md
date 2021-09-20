@@ -2,6 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/Chanooo/CNChart.svg?style=flat)](https://travis-ci.org/Chanooo/CNChart)
 [![Version](https://img.shields.io/cocoapods/v/CNChart.svg?style=flat)](https://cocoapods.org/pods/CNChart)
+[![SwiftPM](https://img.shields.io/badge/SPM-supported-DE5C43.svg?style=flat)](https://swift.org/package-manager/)
 [![License](https://img.shields.io/cocoapods/l/CNChart.svg?style=flat)](https://cocoapods.org/pods/CNChart)
 [![Platform](https://img.shields.io/cocoapods/p/CNChart.svg?style=flat)](https://cocoapods.org/pods/CNChart)
 

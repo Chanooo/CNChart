@@ -56,6 +56,8 @@ open class CNChart: UIStackView {
                 sampleLabel.text = "CNChart\n.        (Horizonal)       .\n"
             case .vertical:
                 sampleLabel.text = "\n\n\n\nCNChart\n(Vertical)\n\n\n\n"
+            @unknown default:
+                sampleLabel.text = "CNChart"
             }
             sampleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             sampleLabel.textAlignment = .center
