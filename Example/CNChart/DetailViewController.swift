@@ -28,6 +28,9 @@ class DetailViewController:
         cellHeightStepper.value = 10
         chartView.delegate = self
         onLoadMore()
+        
+        let chart = CNChart(axis: .horizontal)
+        self.view.addSubview(chart)
     }
     
     @IBAction func onRefresh(_ sender: UIBarButtonItem) {
