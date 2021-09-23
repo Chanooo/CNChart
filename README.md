@@ -11,27 +11,45 @@
 
 **CNChart** is an open source library making it easy to create beautiful, highly customizable, animated Bar Chart for iOS. 
 
+
+## Table of Contents
+
+* [**Screenshots**](#screenshots)  
+* [**Project Details**](#project-details)  
+  * [Requirements](#requirements)
+  * [License](#license)
+  * [Sample App](#sample-app)
+* [**Getting Started**](#getting-started)
+  * [Installation](#installation)
+  * [Setup](#setup)
+* [**Documentation**](#documentation)
+  <!-- * [Enabling / Disabling the Checkbox](#enabling--disabling-the-checkbox) 
+  * [Reloading](#reloading)
+  * [Group / Radio Button Functionality](#group--radio-button-functionality) -->
+  * [Delegate](#delegate)
+  * [Customization](#customization)
+
 ## Project Details
 Learn more about the **CNChart** project, licensing, support etc.
-
 
 ## Example Project
 An Example Project shows up how to use, and what things you can costomize.</br>
 Sample images of example project are blow.
 
-<style type="text/css">
-* {margin: 0; padding: 0;}
-#container {height: 100%; width:100%; font-size: 0;}
-#left, #middle, #right {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
-#left {width: 49%;}
-#middle {width: 2%;}
-#right {width: 49%;}
-</style>
-<div id="container">
-    <div id="left"><img src="./assets/cnchart_vertical_dark.png"/></div>
-    <div id="middle"></div>
-    <div id="right"><img src="./assets/cnchart_horizontal_dark.png"/></div>
-</div>
+
+## Screenshots & GIFs
+<table>
+<tr height="60px" align="center">
+  <!-- <td width="20%"><strong>KafkaRefreshStyle</strong></td> -->
+  <td width="50%"><strong>Vertical Style</strong></td>
+  <td width="50%"><strong>Horizontal Style</strong></td>
+</tr>
+<tr align="center" height="120px">
+  <!-- <td width="300px">Native</td> -->
+  <td><img src="./assets/cnchart_vertical_dark.png"></img></td>
+  <td><img src="./assets/cnchart_horizontal_dark.png"></img></td>
+</tr>
+</table>
 </br></br>
 
 ## Requirements
